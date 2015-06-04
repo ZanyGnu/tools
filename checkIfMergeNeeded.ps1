@@ -21,6 +21,14 @@ function Send-Mail {
 
 pushd $sourceLocation
 
+git fetch
+git checkout -b "$($sourceBranch)"  "origin/$($sourceBranch)"
+git checkout "$($sourceBranch)"
+git pull
+git checkout -b "$($destinationBranch)"  "origin/$($destinationBranch)"
+git checkout "$($destinationBranch)"
+git pull
+
 $missingCommitDetails = ""
 $missingCommitDetails = ""
 
