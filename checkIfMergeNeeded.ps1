@@ -30,7 +30,6 @@ git checkout "$($destinationBranch)"
 git pull
 
 $missingCommitDetails = ""
-$missingCommitDetails = ""
 
 $htmlTemplate = '<html>
 
